@@ -26,14 +26,14 @@ namespace To_do_list_API.Controllers
             }
             else
             {
-                var iteminDb = _context.ToDoList.Find(toDoItem.Id);
+                var todoiteminDb = _context.ToDoList.Find(toDoItem.Id);
 
-                if (iteminDb == null)
+                if (todoiteminDb == null)
                 {
                     return new JsonResult(NotFound());
                 }
 
-                iteminDb.Todoitem = toDoItem.Todoitem;
+                todoiteminDb.Todoitem = toDoItem.Todoitem;
 
             }
 
